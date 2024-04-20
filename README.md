@@ -157,5 +157,3 @@ Input length of input_ids is 90, but `max_length` is set to 20. This can lead to
 🔗 https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2
 
 The model showed decent results, but during the last stages of project the server hosting Mistral-7B-Instruct-v0.2 was not operational.
-
-[info](https://www.notion.so/info-69ec8616a3324bab956c920bf97f645b?pvs=21)
