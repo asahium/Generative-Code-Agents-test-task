@@ -7,10 +7,15 @@ fun main(args: Array<String>) {
         println("Usage: <program> <path to python file> <number of attempts> <name of the model>")
         return
     }
+    val defaultPythonFilePath = "./src/data/Many.py"
+    val defaultModelName = "Mixtral"
+    val defaultMaxAttempts = 10
+
     val correctedFilePath = "correct.py"
-    val pythonFilePath = args[0] // default "./src/data/Many.py"
-    val maxAttempts = args[1].toIntOrNull() ?: 10
-    val modelName = args[2]
+    val pythonFilePath = args.getOrNull(0) ?: defaultPythonFilePath
+    val maxAttempts = args.getOrNull(1)?.toIntOrNull() ?: defaultMaxAttempts
+    val modelName = args.getOrNull(2) ?: defaultModelName
+
     var attempt = 0
     var hasErrors: Boolean
 
