@@ -1,0 +1,5 @@
+[
+  {
+    "generated_text": "Fix all the errors in the python code, give only correct code as output\"def greet(name)\\n    print(\\\"Hello, \\\" + name + \\\"!\\\")\\n\\ndef calculate_area(radius):\\nreturn 3.14 * radius ** 2\\n\\nnumbers = [1, 2, 3, 4\\nfor number in numbers\\nprint(number)\\n\"write only corrected code without any words\n\n```python\ndef greet(name):\n    print(\"Hello, \" + name + \"!\")\n\ndef calculate_area(radius):\n    return 3.14 * radius ** 2\n\nnumbers = [1, 2, 3, 4]\nfor number in numbers:\n    print(number)\n```"
+  }
+]
