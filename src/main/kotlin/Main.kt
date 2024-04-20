@@ -10,13 +10,14 @@ fun main(args: Array<String>) {
     val correctedFilePath = "correct.py"
     val pythonFilePath = args[0] // default "./src/data/Many.py"
     val maxAttempts = args[1].toIntOrNull() ?: 10
+    val modelName = args[2]
     var attempt = 0
     var hasErrors: Boolean
 
 
     println("Starting correction process")
     do {
-        sendToLLM(pythonFilePath)
+        sendToLLM(pythonFilePath, modelName)
 
         try {
             val jsonData = File("answer.json").readText()
@@ -55,9 +56,9 @@ fun main(args: Array<String>) {
     }
 }
 
-fun sendToLLM(filePath: String) {
+fun sendToLLM(filePath: String, modelName: String) {
     try {
-        val processBuilder = ProcessBuilder("./request.sh", filePath)
+        val processBuilder = ProcessBuilder("./request.sh", filePath, modelName)
         processBuilder.redirectErrorStream(true)
         val process = processBuilder.start()
         process.inputStream.bufferedReader().use {
