@@ -55,7 +55,8 @@ fun main(args: Array<String>) {
     } while (hasErrors && attempt < maxAttempts)
 
     if (hasErrors) {
-        println("Could not fix all errors within 10 attempts.")
+        println("Could not fix all errors within $maxAttempts attempts.")
+        File(correctedFilePath).delete()
     } else {
         println("Correction successful. No errors detected in the corrected code. File: $correctedFilePath")
     }
