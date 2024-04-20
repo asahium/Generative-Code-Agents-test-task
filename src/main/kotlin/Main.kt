@@ -4,7 +4,7 @@ import java.io.File
 
 fun main(args: Array<String>) {
     if (args.size < 2) {
-        println("Usage: <program> <path to python file> <number of attempts>")
+        println("Usage: <program> <path to python file> <number of attempts> <name of the model>")
         return
     }
     val correctedFilePath = "correct.py"
